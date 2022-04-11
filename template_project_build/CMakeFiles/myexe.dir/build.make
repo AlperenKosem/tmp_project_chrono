@@ -95,6 +95,9 @@ myexe: CMakeFiles/myexe.dir/build.make
 myexe: /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so
 myexe: /usr/lib/x86_64-linux-gnu/libpthread.so
 myexe: /usr/lib/x86_64-linux-gnu/libIrrlicht.so
+myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoEngine_vehicle_irrlicht.so
+myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoModels_vehicle.so
+myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoEngine_vehicle.so
 myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoEngine_postprocess.so
 myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoEngine_irrlicht.so
 myexe: /home/alperen/Dev/chrono_tutorial/build_chrono/lib/libChronoModels_robot.so

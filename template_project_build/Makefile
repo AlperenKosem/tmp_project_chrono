@@ -129,6 +129,19 @@ myexe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myexe.dir/build.make CMakeFiles/myexe.dir/build
 .PHONY : myexe/fast
 
+#=============================================================================
+# Target rules for targets named my_vehicle
+
+# Build rule for target.
+my_vehicle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_vehicle
+.PHONY : my_vehicle
+
+# fast build rule for target.
+my_vehicle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_vehicle.dir/build.make CMakeFiles/my_vehicle.dir/build
+.PHONY : my_vehicle/fast
+
 my_example.o: my_example.cpp.o
 .PHONY : my_example.o
 
@@ -153,6 +166,30 @@ my_example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myexe.dir/build.make CMakeFiles/myexe.dir/my_example.cpp.s
 .PHONY : my_example.cpp.s
 
+wheeled_vehicle.o: wheeled_vehicle.cpp.o
+.PHONY : wheeled_vehicle.o
+
+# target to build an object file
+wheeled_vehicle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_vehicle.dir/build.make CMakeFiles/my_vehicle.dir/wheeled_vehicle.cpp.o
+.PHONY : wheeled_vehicle.cpp.o
+
+wheeled_vehicle.i: wheeled_vehicle.cpp.i
+.PHONY : wheeled_vehicle.i
+
+# target to preprocess a source file
+wheeled_vehicle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_vehicle.dir/build.make CMakeFiles/my_vehicle.dir/wheeled_vehicle.cpp.i
+.PHONY : wheeled_vehicle.cpp.i
+
+wheeled_vehicle.s: wheeled_vehicle.cpp.s
+.PHONY : wheeled_vehicle.s
+
+# target to generate assembly for a file
+wheeled_vehicle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_vehicle.dir/build.make CMakeFiles/my_vehicle.dir/wheeled_vehicle.cpp.s
+.PHONY : wheeled_vehicle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... my_vehicle"
 	@echo "... myexe"
 	@echo "... my_example.o"
 	@echo "... my_example.i"
 	@echo "... my_example.s"
+	@echo "... wheeled_vehicle.o"
+	@echo "... wheeled_vehicle.i"
+	@echo "... wheeled_vehicle.s"
 .PHONY : help
 
 

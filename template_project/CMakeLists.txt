@@ -62,7 +62,7 @@ project(my_project)
 
 LIST(APPEND CMAKE_PREFIX_PATH "${CMAKE_INSTALL_PREFIX}/../Chrono/lib")
 find_package(Chrono
-             COMPONENTS Irrlicht
+             COMPONENTS Irrlicht Vehicle
              OPTIONAL_COMPONENTS PardisoMKL
              CONFIG)
 
@@ -130,6 +130,7 @@ endif()
 
 add_executable(myexe my_example.cpp)
 
+add_executable(my_vehicle wheeled_vehicle.cpp)
 #--------------------------------------------------------------
 # Set properties for your executable target
 # 
@@ -143,12 +144,19 @@ set_target_properties(myexe PROPERTIES
 	    COMPILE_FLAGS "${CHRONO_CXX_FLAGS} ${EXTRA_COMPILE_FLAGS}"
 	    COMPILE_DEFINITIONS "CHRONO_DATA_DIR=\"${CHRONO_DATA_DIR}\""
 	    LINK_FLAGS "${CHRONO_LINKER_FLAGS}")
-
+	    
+	    set_target_properties(my_vehicle PROPERTIES 
+	    COMPILE_FLAGS "${CHRONO_CXX_FLAGS} ${EXTRA_COMPILE_FLAGS}"
+	    COMPILE_DEFINITIONS "CHRONO_DATA_DIR=\"${CHRONO_DATA_DIR}\""
+      LINK_FLAGS "${CHRONO_LINKER_FLAGS}"
+      
+      )
 #--------------------------------------------------------------
 # Link to Chrono libraries and dependency libraries
 #--------------------------------------------------------------
 
 target_link_libraries(myexe ${CHRONO_LIBRARIES})
+target_link_libraries(my_vehicle ${CHRONO_LIBRARIES})
 
 #--------------------------------------------------------------
 # === 4 (OPTIONAL) ===
@@ -163,3 +171,5 @@ target_link_libraries(myexe ${CHRONO_LIBRARIES})
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 add_DLL_copy_command("${CHRONO_DLLS}")
+
+

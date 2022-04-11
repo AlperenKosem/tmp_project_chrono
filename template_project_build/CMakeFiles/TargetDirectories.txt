@@ -1,3 +1,4 @@
 /home/alperen/Dev/tmp_project_chrono/template_project_build/CMakeFiles/myexe.dir
+/home/alperen/Dev/tmp_project_chrono/template_project_build/CMakeFiles/my_vehicle.dir
 /home/alperen/Dev/tmp_project_chrono/template_project_build/CMakeFiles/edit_cache.dir
 /home/alperen/Dev/tmp_project_chrono/template_project_build/CMakeFiles/rebuild_cache.dir
